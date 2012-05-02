@@ -1,0 +1,6 @@
+D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\MVCAppTest.dll
+D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\MVCAppTest.pdb
+D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\EntityFramework.dll
+D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\EntityFramework.xml
+D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\obj\Release\MVCAppTest.dll
+D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\obj\Release\MVCAppTest.pdb
