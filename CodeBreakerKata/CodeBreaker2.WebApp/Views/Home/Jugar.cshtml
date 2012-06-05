@@ -1,0 +1,30 @@
+﻿@model CodeBreaker.Game
+           
+@{
+    ViewBag.Title = "Jugar";
+}
+
+<h2>@ViewBag.Message</h2>
+
+@using (Html.BeginForm("Jugar", "Home", FormMethod.Post)) {
+    <fieldset>
+        <legend>Arriesga un codigo</legend>
+
+        <div class="editor-label">
+            @*@Html.LabelFor(model => model.NumeroIngresado)*@
+            Numero:
+        </div>
+        <div class="editor-field">
+            @*@Html.EditorFor(model => model.NumeroIngresado)*@
+        </div>
+        
+        <div class="display-label">Pista: </div>
+        <div class="display-field">
+            @*@Html.DisplayFor(model => model.Pista)*@
+        </div>
+
+        <p>
+            <input type="submit" value="GO!" />
+        </p>
+    </fieldset>
+}

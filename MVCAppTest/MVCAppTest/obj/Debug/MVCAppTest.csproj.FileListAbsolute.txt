@@ -1,7 +1,0 @@
-D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\MVCAppTest.dll
-D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\MVCAppTest.pdb
-D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\EntityFramework.dll
-D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\bin\EntityFramework.xml
-D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\obj\Debug\MVCAppTest.csprojResolveAssemblyReference.cache
-D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\obj\Debug\MVCAppTest.dll
-D:\Juanjo\Documentos\Seriva\Bolsa\Proyectos\TeamCity-tests\MVCAppTest\MVCAppTest\obj\Debug\MVCAppTest.pdb

@@ -1,0 +1,7 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="CodeBreaker2.Specs\bin\Debug\CodeBreaker2.Specs.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto" />
+</NUnitProject>
