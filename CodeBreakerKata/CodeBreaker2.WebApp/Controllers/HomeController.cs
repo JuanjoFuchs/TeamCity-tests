@@ -1,53 +1,69 @@
 ﻿using System.Web.Mvc;
+using CodeBreaker.WebApp.Models;
 
 namespace CodeBreaker.WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        Game _juego = new Game();
+        public GameModel Model = new GameModel();
+
+        Game _juego;
 
         public ActionResult Index()
         {
-            ViewBag.Message = "Bienvenido al Code Breaker";
             _juego = new Game();
-            _juego.NuevoNumero();
+
+            ViewBag.Message = "Bienvenido al Code Breaker";
+            TempData["Juego"] = _juego;
+
             return View();
         }
 
         public ActionResult Jugar()
         {
-            ViewBag.Message = "Arriesga un codigo";
+            _juego = TempData["Juego"] as Game;
+            
             _juego.NuevoNumero();
-            return View();
+            Model.NumeroCorrecto = _juego.NumeroCorrecto;
+
+            ViewBag.Message = "Arriesga un codigo";
+            TempData["Juego"] = _juego;
+            
+            return View(Model);
         }
 
         [HttpPost]
         public ActionResult Jugar(int numeroIngresado)
         {
+            _juego = TempData["Juego"] as Game;
+
             _juego.ProbarNumero(numeroIngresado);
+            Model.Pista = _juego.Pista;
             if (_juego.Gane)
-                return Ganaste();
-            return View();
+            {
+                Ganaste();
+                return RedirectToAction("Ganaste", "Home");
+            }
+
+            TempData["Juego"] = _juego;
+
+            return View(Model);
         }
 
         public ActionResult Ganaste()
         {
+            _juego = TempData["Juego"] as Game;
+
             ViewBag.Message = "GANASTE !!! el numero correcto era : " + _juego.NumeroCorrecto;
+
             return View();
         }
 
-        public int NumeroCorrecto
+        public void EstablecerNumeroCorrecto(int numeroCorrecto)
         {
-            get { return _juego.NumeroCorrecto; }
-            set
-            {
-                _juego.NumeroCorrecto = value;
-            }
+            _juego.NumeroCorrecto = numeroCorrecto;
+            Model.NumeroCorrecto = numeroCorrecto;
         }
 
-        public string Pista
-        {
-            get { return _juego.Pista; }
-        }
     }
 }

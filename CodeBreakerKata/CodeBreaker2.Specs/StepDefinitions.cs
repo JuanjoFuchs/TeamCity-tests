@@ -45,15 +45,14 @@ namespace CodeBreaker2.Specs
         [Then(@"Debería generar el numero al azar de cuatro digitos")]
         public void EntoncesDeberiaGenerarElNumeroAlAzarDeCuatroDigitos()
         {
-            Assert.AreEqual(4, _controller.NumeroCorrecto.ToString("G").Length);
-            Assert.That(_controller.NumeroCorrecto > 999);
-            Assert.That(_controller.NumeroCorrecto < 10000);
+            Assert.That(_controller.Model.NumeroCorrecto > 999);
+            Assert.That(_controller.Model.NumeroCorrecto < 10000);
         }
 
         [Given(@"El numero correcto es (.*)")]
         public void CuandoElNumeroCorrectoEs(string numeroCorrecto)
         {
-            _controller.NumeroCorrecto = Int32.Parse(numeroCorrecto);
+            _controller.EstablecerNumeroCorrecto(Int32.Parse(numeroCorrecto));
         }
 
         [When(@"Pruebo con (.*)")]
@@ -65,7 +64,7 @@ namespace CodeBreaker2.Specs
         [Then(@"Debería ver esta (.*)")]
         public void EntoncesDeberiaVerEstaPista(string pista)
         {
-            Assert.AreEqual(pista, _controller.Pista);
+            Assert.AreEqual(pista, _controller.Model.Pista);
         }
 
         [Then(@"Debería ver el mensaje ""GANASTE !!! el numero correcto era : 4152""")]
