@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OutputPath>Deploy</OutputPath>
+    <ProjectName>CodeBreakerKata</ProjectName>
+  </PropertyGroup>
+  
+  <Target Name="DebugBuild">
+    <Message Text="Building $(ProjectName)" />
+    <MSBuild Projects="$(ProjectName).sln" Targets="Clean" Properties="Configuration=Debug"/>
+    <MSBuild Projects="$(ProjectName).sln" Targets="Build" Properties="Configuration=Debug"/>
+  </Target>
+
+  <Target Name="BuildAndTest" DependsOnTargets="DebugBuild">
+    <Message Text="Running $(ProjectName) Unit Tests" />
+    <Exec Command="lib\Nunit\nunit-console-x86.exe CodeBreaker.Tests\bin\debug\CodeBreaker.Tests.dll /nologo /framework=4.0.30319 /xml:UnitTestResults.xml"/>
+  </Target>
+
+</Project>
