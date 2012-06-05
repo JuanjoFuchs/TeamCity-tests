@@ -18,9 +18,9 @@
     <NUnitTeamCity Assemblies="CodeBreaker.Tests\bin\debug\CodeBreaker.Tests.dll" />
   </Target>
 
-  <Target Name="AcceptanceTests" DependsOnTargets="UnitTests">
-    <Message Text="Running $(ProjectName) Acceptance Tests" />
-    <NUnitTeamCity Assemblies="CodeBreaker2.Specs\bin\debug\CodeBreaker.Specs.dll" />
+  <Target Name="SpecFlowTests" DependsOnTargets="UnitTests">
+    <Message Text="Running $(ProjectName) SpecFlow Tests" />
+    <Exec Command="RunSpecFlow.bat" />
   </Target>
 
 </Project>
