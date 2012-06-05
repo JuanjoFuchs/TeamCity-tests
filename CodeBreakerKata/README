@@ -1,0 +1,8 @@
+Code Breaker Game
+
+Developed using ASP.NET MVC3, NUnit and SpecFlow
+
+CI on TeamCity using MSBuild to run all tests, including acceptance tests
+
+TeamCity integration with Specflow based on:
+http://www.hamishgraham.net/post/TeamCity-SpecFlow-Integration.aspx

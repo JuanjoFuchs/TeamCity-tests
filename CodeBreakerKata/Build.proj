@@ -4,7 +4,6 @@
   <PropertyGroup>
     <OutputPath>Deploy</OutputPath>
     <ProjectName>CodeBreakerKata</ProjectName>
-    
   </PropertyGroup>
   
   <Target Name="DebugBuild">
