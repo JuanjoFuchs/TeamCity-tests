@@ -20,7 +20,7 @@
 
   <Target Name="AcceptanceTests" DependsOnTargets="UnitTests">
     <Message Text="Running $(ProjectName) Acceptance Tests" />
-    <NUnitTeamCity Assemblies="CodeBreaker.Specs\bin\debug\CodeBreaker.Specs.dll" />
+    <NUnitTeamCity Assemblies="CodeBreaker2.Specs\bin\debug\CodeBreaker.Specs.dll" />
   </Target>
 
 </Project>
