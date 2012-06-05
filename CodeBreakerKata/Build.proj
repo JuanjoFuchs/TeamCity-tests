@@ -13,9 +13,14 @@
     <MSBuild Projects="$(ProjectName).sln" Targets="Build" Properties="Configuration=Debug"/>
   </Target>
 
-  <Target Name="BuildAndTest" DependsOnTargets="DebugBuild">
+  <Target Name="UnitTests" DependsOnTargets="DebugBuild">
     <Message Text="Running $(ProjectName) Unit Tests" />
     <NUnitTeamCity Assemblies="CodeBreaker.Tests\bin\debug\CodeBreaker.Tests.dll" />
+  </Target>
+
+  <Target Name="AcceptanceTests" DependsOnTargets="UnitTests">
+    <Message Text="Running $(ProjectName) Acceptance Tests" />
+    <NUnitTeamCity Assemblies="CodeBreaker.Specs\bin\debug\CodeBreaker.Specs.dll" />
   </Target>
 
 </Project>
